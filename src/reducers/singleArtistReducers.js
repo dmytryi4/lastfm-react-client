@@ -1,8 +1,8 @@
 import {
-    FETCH_ARTIST_INFO_BEGIN,
-    FETCH_ARTIST_INFO_SUCCESS,
-    FETCH_ARTIST_INFO_FAILURE
-} from './../actions/singleArtistActions';
+  FETCH_ARTIST_INFO_BEGIN,
+  FETCH_ARTIST_INFO_SUCCESS,
+  FETCH_ARTIST_INFO_FAILURE
+} from './../constants/actionsTypes';
 
 const initialState = {
     loading: true,

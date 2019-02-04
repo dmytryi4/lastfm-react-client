@@ -1,8 +1,8 @@
 import {
-    FETCH_TRACKS_BEGIN,
-    FETCH_TRACKS_SUCCESS,
-    FETCH_TRACKS_FAILURE
-} from './../actions/topTrackActions';
+  FETCH_TRACKS_BEGIN,
+  FETCH_TRACKS_SUCCESS,
+  FETCH_TRACKS_FAILURE
+} from './../constants/actionsTypes';
 
 const initialState = {
     loading: true,

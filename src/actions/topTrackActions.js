@@ -1,8 +1,10 @@
-import apiConstants from './../constants/api-constants';
+import apiConstants from './../constants/apiConstants';
 
-export const FETCH_TRACKS_BEGIN    = 'FETCH_TRACKS_BEGIN';
-export const FETCH_TRACKS_SUCCESS  = 'FETCH_TRACKS_SUCCESS';
-export const FETCH_TRACKS_FAILURE  = 'FETCH_TRACKS_FAILURE';
+import {
+    FETCH_TRACKS_BEGIN,
+    FETCH_TRACKS_SUCCESS,
+    FETCH_TRACKS_FAILURE
+} from './../constants/actionsTypes';
 
 const { baseURL, apiKey } = apiConstants;
 

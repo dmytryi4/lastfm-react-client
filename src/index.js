@@ -1,17 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import './index.css';
-import App from './App';
-import Home from './components/home/home';
-import SingleArtist from './components/singleArtist/singleArtist';
-
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import { Provider } from 'react-redux';
-
-// import rootReducers from './store/reducers';
-import { rootReducers } from './reducers/reducers';
+import { rootReducers } from './reducers/rootReducers';
 import { createStore, applyMiddleware } from "redux";
 import thunk from "redux-thunk";
+import App from './containers/App';
+import Home from './containers/homeContainer';
+import Artist from './containers/ArtistContainer';
+
+import './index.scss';
 
 const store = createStore(rootReducers, applyMiddleware(thunk));
 
@@ -20,7 +18,7 @@ ReactDOM.render(
         <Router>
             <App>
                 <Route exact path="/" component={Home}></Route>
-                <Route exact path="/singleArtist/:name" component={SingleArtist}></Route>   
+                <Route exact path="/singleArtist/:name" component={Artist}></Route>   
             </App>
         </Router>
     </Provider>

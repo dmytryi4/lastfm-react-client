@@ -1,8 +1,10 @@
-import apiConstants from './../constants/api-constants';
-
-export const FETCH_ARTIST_INFO_BEGIN    = 'FETCH_ARTIST_INFO_BEGIN';
-export const FETCH_ARTIST_INFO_SUCCESS  = 'FETCH_ARTIST_INFO_SUCCESS';
-export const FETCH_ARTIST_INFO_FAILURE  = 'FETCH_ARTIST_INFO_FAILURE';
+// import apiConstants from '../constants/apiConstants';
+import apiConstants from './../constants/apiConstants';
+import {
+    FETCH_ARTIST_INFO_BEGIN,
+    FETCH_ARTIST_INFO_SUCCESS,
+    FETCH_ARTIST_INFO_FAILURE
+} from './../constants/actionsTypes';
 
 const { baseURL, apiKey } = apiConstants;
 
