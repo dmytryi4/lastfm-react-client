@@ -8,6 +8,7 @@ import thunk from "redux-thunk";
 import App from './containers/App';
 import Home from './containers/homeContainer';
 import Artist from './containers/ArtistContainer';
+import ScrollToTop from './components/scrollToTop/scrollToTop';
 
 import './index.scss';
 
@@ -16,10 +17,12 @@ const store = createStore(rootReducers, applyMiddleware(thunk));
 ReactDOM.render(
     <Provider store={store}>
         <Router>
-            <App>
-                <Route exact path="/" component={Home}></Route>
-                <Route exact path="/singleArtist/:name" component={Artist}></Route>   
-            </App>
+            <ScrollToTop>
+                <App>
+                    <Route exact path="/" component={Home}></Route>
+                    <Route exact path="/singleArtist/:name" component={Artist}></Route>   
+                </App>
+            </ScrollToTop>
         </Router>
     </Provider>
 , 

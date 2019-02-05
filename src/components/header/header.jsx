@@ -1,7 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import './header.scss';
 import logo from './../../logo.png';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
     return (
@@ -10,7 +11,9 @@ const Header = () => {
                 <Row className="justify-content-center text-center">
                     <Col>
                         <div className="logo">
-                            <img src={logo} alt=""/>
+                            <Link to="/">
+                                <img src={logo} alt=""/>
+                            </Link>
                         </div>
                     </Col>
                 </Row>

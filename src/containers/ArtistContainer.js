@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import { fetchArtistInfo } from '../actions/singleArtistActions';
 import { connect } from 'react-redux';
 import SingleArtist from './../components/singleArtist/singleArtist';
-
+import { withRouter } from 'react-router-dom';
+import Preloader from '../components/preloader/preloader';
 
 class Artist extends Component {
 
@@ -21,7 +22,16 @@ class Artist extends Component {
 
     render (){
 
-        const { artist } = this.props;
+        const { loading, error, artist } = this.props;
+
+        if (error) {
+            return <div>Error! {error.message}</div>;
+        }
+      
+        if (loading) {
+            return <Preloader/>;
+        }
+
         return  (
             <SingleArtist 
                 artist={artist}
@@ -31,7 +41,6 @@ class Artist extends Component {
 }
 
 function mapStateToProps(state ){
-    // console.log( state );
     return {
         loading: state.singleArtistReducer.loading,
         error: state.singleArtistReducer.error,
@@ -39,4 +48,4 @@ function mapStateToProps(state ){
     }
 }
   
-export default connect(mapStateToProps)(Artist);
+export default withRouter( connect(mapStateToProps)(Artist) );

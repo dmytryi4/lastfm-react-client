@@ -1,0 +1,77 @@
+$color-bg: #f7f5f8;
+$title-color: #2a2a2a;
+$link-color: #32006b;
+$icon-bg: #6315bc;
+
+img {
+    max-width: 100%;
+}
+
+.top-playlist {
+    
+    &__item {
+        margin-bottom: 30px;
+    }
+
+    &__image {
+        position: relative;
+    }
+
+    &__icon {
+        background: $icon-bg;
+        border-radius: 50%;
+        position: absolute;
+        right: 20px;
+        bottom: -15px;
+        width: 30px;
+        height: 30px;
+        text-align: center;
+    }
+
+    &__content {
+        padding: 30px 20px;
+        background: $color-bg;
+
+        @media (max-width: 600px){
+            padding: 15px 10px;
+        }
+
+        h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 24px;
+            line-height: 35px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            text-transform: capitalize;
+
+            @media (max-width: 600px){
+                font-size: 16px;
+                line-height: 22px;
+            }
+        }
+    }
+
+    &__author-name {
+        font-size: 14px;
+        line-height: 30px;
+        letter-spacing: 0.25px;
+        font-weight: 700;
+
+        @media (max-width: 600px){
+            line-height: 18px;
+        }
+        
+        a {
+            color: $title-color;
+        }
+    }
+
+    &__last-fm-link {
+        color: $link-color;
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 1;
+        letter-spacing: 0.25px;
+    }
+}
