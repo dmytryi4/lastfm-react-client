@@ -1,9 +1,9 @@
 import React, { Component, Fragment } from 'react';
-import './topTracksList.scss';
 import { Link } from 'react-router-dom';
 import { Col, Row, Container } from 'react-bootstrap';
 import Icon from '@mdi/react'
-import {  mdiShare, mdiPlay } from '@mdi/js'
+import {  mdiShare, mdiPlay } from '@mdi/js';
+import './topTracksList.scss';
 
 class TopTrackslist extends Component {
   

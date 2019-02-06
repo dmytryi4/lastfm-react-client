@@ -4,15 +4,14 @@ import TopTrackslist from '../components/topTracksList/topTracksList';
 import { fetchTopTracks } from '../actions/topTrackActions';
 import { Button, Container, Row, Col } from 'react-bootstrap';
 import { withRouter } from 'react-router-dom';
-import Preloader from '../components/preloader/preloader';
 
 class Home extends Component {
 
-  constructor(props){
-    super(props);
+  // constructor(props){
+  //   super(props);
 
-    // this.LoadMorehandler = this.LoadMorehandler.bind(this);
-  }
+  //   // this.LoadMorehandler = this.LoadMorehandler.bind(this);
+  // }
 
   componentDidMount(){
     this.props.dispatch(fetchTopTracks(1, 12));
@@ -23,15 +22,11 @@ class Home extends Component {
   // }
 
   render() {
-    const { loading, error, tracks } = this.props;
+    const {  error, tracks } = this.props;
     console.log( this.props );
 
     if (error) {
       return <div>Error! {error.message}</div>;
-    }
-
-    if (loading) {
-      return <Preloader/>;
     }
 
     return (

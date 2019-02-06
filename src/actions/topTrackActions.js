@@ -1,5 +1,4 @@
 import apiConstants from './../constants/apiConstants';
-
 import {
     FETCH_TRACKS_BEGIN,
     FETCH_TRACKS_SUCCESS,
@@ -36,7 +35,6 @@ export function fetchTopTracks( page, limit ) {
     };
 }
 
-// Handle HTTP errors since fetch won't.
 function handleErrors(response) {
     if (!response.ok) {
       throw Error(response.statusText);

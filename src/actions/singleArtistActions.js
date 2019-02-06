@@ -1,4 +1,3 @@
-// import apiConstants from '../constants/apiConstants';
 import apiConstants from './../constants/apiConstants';
 import {
     FETCH_ARTIST_INFO_BEGIN,

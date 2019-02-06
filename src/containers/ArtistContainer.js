@@ -3,8 +3,6 @@ import { fetchArtistInfo } from '../actions/singleArtistActions';
 import { connect } from 'react-redux';
 import SingleArtist from './../components/singleArtist/singleArtist';
 import { withRouter } from 'react-router-dom';
-import Preloader from '../components/preloader/preloader';
-
 class Artist extends Component {
 
     componentDidMount() {
@@ -22,16 +20,12 @@ class Artist extends Component {
 
     render (){
 
-        const { loading, error, artist } = this.props;
+        const { error, artist } = this.props;
 
         if (error) {
             return <div>Error! {error.message}</div>;
         }
       
-        if (loading) {
-            return <Preloader/>;
-        }
-
         return  (
             <SingleArtist 
                 artist={artist}

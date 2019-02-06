@@ -1,8 +1,5 @@
-import React, { Component, Fragment } from 'react';
-import './topTracksList.css';
-import { Link } from 'react-router-dom';
-import { Col, Row, Container } from 'react-bootstrap';
-import { fetchTopTracks } from './../../actions/topTrackActions';
+import React, { Component } from 'react';
+import { fetchTopTracks } from '../actions/topTrackActions';
 import { connect } from 'react-redux';
 import TopTrackslist from '../components/topTracksList/topTracksList';
 
