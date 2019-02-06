@@ -10,10 +10,12 @@ const initialState = {
     tracks: {
         track: [],
         '@attr': {
-
+            'page': 1,
+            'perPage': 12,
         }
     }
 };
+
 
 export const topTrackReducer = (state = initialState, action ) => {
     
@@ -29,15 +31,15 @@ export const topTrackReducer = (state = initialState, action ) => {
           return {
             ...state,
             loading: false,
-            tracks: Object.assign({}, action.payload.tracks.tracks)
+            tracks: action.payload.tracks.tracks
           };
-    
+   
         case FETCH_TRACKS_FAILURE:
           return {
             ...state,
             loading: false,
             error: action.payload.error,
-            tracksList: []
+            tracks: []
           };
     
         default:

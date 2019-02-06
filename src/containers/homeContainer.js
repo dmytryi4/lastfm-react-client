@@ -2,28 +2,19 @@ import React, { Component , Fragment} from 'react';
 import { connect } from 'react-redux';
 import TopTrackslist from '../components/topTracksList/topTracksList';
 import { fetchTopTracks } from '../actions/topTrackActions';
-import { Button, Container, Row, Col } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
 import { withRouter } from 'react-router-dom';
 
 class Home extends Component {
-
-  // constructor(props){
-  //   super(props);
-
-  //   // this.LoadMorehandler = this.LoadMorehandler.bind(this);
-  // }
-
+  
   componentDidMount(){
-    this.props.dispatch(fetchTopTracks(1, 12));
+    this.props.dispatch(fetchTopTracks(
+      this.props.tracks['@attr'].page, 
+      this.props.tracks['@attr'].perPage ));
   }
-
-  // LoadMorehandler (page) {
-  //   this.props.dispatch(fetchTopTracks(2, 12));
-  // }
 
   render() {
     const {  error, tracks } = this.props;
-    console.log( this.props );
 
     if (error) {
       return <div>Error! {error.message}</div>;
@@ -37,7 +28,6 @@ class Home extends Component {
             </Row>
           </Container>
           <TopTrackslist tracks={tracks}/>
-          <Button variant="primary">Load More</Button>
       </Fragment>
     );
   }

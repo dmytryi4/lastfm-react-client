@@ -35,7 +35,7 @@ export const singleArtistReducer = (state = initialState, action ) => {
           return {
             ...state,
             loading: false,
-            artist: Object.assign({}, action.payload.artist)
+            artist: action.payload.artist
           };
     
         case FETCH_ARTIST_INFO_FAILURE:
