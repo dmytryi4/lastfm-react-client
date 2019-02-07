@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/dmytryi4/lastfm-react-client/precache-manifest.c12568b163ae311a737711a1c0fad1b9.js"
+  "/lastfm-react-client/precache-manifest.fdffcd3a0686883cd4f4fe14aec5e2bf.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/dmytryi4/lastfm-react-client/index.html", {
+workbox.routing.registerNavigationRoute("/lastfm-react-client/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });
